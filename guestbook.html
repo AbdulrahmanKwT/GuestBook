@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Guestbook Entries</h2>
+  <ul>
+    {% for entry in entries %}
+      <li>{{ entry.name }} — signed at {{ entry.time }}</li>
+    {% else %}
+      <li>No entries yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
